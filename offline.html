@@ -3,41 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow" />
-  <meta name="theme-color" content="#1C3D27" />
-  <title>Offline • Agroverso</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#004225" />
 
-  <link rel="stylesheet" href="assets/css/principal.css" />
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-  <script src="scripts/core/includes.js" defer></script>
+  <title>🌿 Offline • Agroverso</title>
+  <meta name="description" content="Você está offline. Assim que sua conexão retornar, o Agroverso estará novamente disponível com sabedoria, força e beleza." />
+
+  <!-- Favicon leve para contingência -->
+  <link rel="icon" href="assets/favicon.ico" />
+
+  <style>
+    :root {
+      --verde: #004225;
+      --bege: #f6f9f2;
+      --cinza: #666;
+      --cinza-claro: #bbb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bege);
+      color: var(--verde);
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    header {
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    header img {
+      width: 96px;
+      height: auto;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 0 2px var(--verde));
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      color: var(--cinza);
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.875rem;
+      color: var(--cinza-claro);
+    }
+  </style>
 </head>
 
-<body>
-  <div data-include="partials/header.html"></div>
+<body aria-live="polite" aria-label="Página de contingência offline do Agroverso">
+  <header role="banner" aria-label="Cabeçalho simplificado do Agroverso">
+    <img src="assets/logo-192.png" alt="Logotipo do Agroverso" />
+    <h1>🌱 Você está offline</h1>
+    <p>
+      A conexão com o Agroverso foi temporariamente interrompida.<br />
+      Assim que o sinal retornar, todo o ecossistema estará disponível novamente.<br />
+      Até lá, preserve sua energia e mantenha-se enraizado.
+    </p>
+  </header>
 
-  <main class="painel-container" role="main" aria-label="Página de acesso offline do Agroverso">
-    <section class="painel-header">
-      <h1 class="painel-titulo">🌐 Conexão Perdida</h1>
-      <p class="painel-subtitulo">Parece que você está offline no momento.</p>
-    </section>
-
-    <section class="painel-conteudo">
-      <div class="cartao-dado">
-        <h2>🔄 Verifique sua conexão</h2>
-        <p>Tente reconectar à internet e atualizar esta página.</p>
-      </div>
-
-      <div class="cartao-dado">
-        <h2>📚 Funcionalidades Offline</h2>
-        <p>Algumas páginas do Agroverso podem funcionar offline se tiverem sido previamente carregadas.</p>
-      </div>
-
-      <div class="cartao-acao">
-        <a href="index.html" class="btn-voltar">← Voltar para a Página Inicial</a>
-      </div>
-    </section>
-  </main>
-
-  <div data-include="partials/footer.html"></div>
+  <footer role="contentinfo" aria-label="Rodapé institucional do Agroverso">
+    Agroverso — Tecnologia regenerativa com <strong>sabedoria</strong>, <strong>força</strong> e <strong>beleza</strong>.
+  </footer>
 </body>
 </html>

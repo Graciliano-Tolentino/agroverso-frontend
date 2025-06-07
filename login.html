@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- ======================================================================================
+  🌐 login.html – Tela de Acesso Seguro Agroverso
+  🔐 Refatorado com clareza, acessibilidade, modularidade e experiência regenerativa
+  ======================================================================================= -->
+
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#1C3D27" />
-  <title>Login • Agroverso</title>
+  <meta name="author" content="Instituto Graciliana Maria da Conceição" />
+  <meta name="description" content="Acesse o painel Agroverso com segurança regenerativa, controle preciso e integração por perfil técnico." />
 
-  <link rel="stylesheet" href="assets/css/principal.css" />
+  <title>Login Seguro • Agroverso</title>
+
+  <!-- 🎨 Estilos -->
+  <link rel="stylesheet" href="assets/css/estilos.css" />
+  <link rel="stylesheet" href="assets/css/login.css" />
+
+  <!-- 🖼️ Favicon -->
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-  <script src="scripts/core/includes.js" defer></script>
-  <script src="scripts/core/auth.js" defer></script>
-  <script src="scripts/modulos/login.js" defer></script>
 </head>
 
 <body class="login-body">
+
+  <!-- 🧭 Cabeçalho Padrão (opcional) -->
   <div data-include="partials/header.html"></div>
 
-  <main class="login-container" role="main" aria-label="Área de login do sistema Agroverso">
-    <section class="login-box">
-      <h2 class="login-title">Acesso Seguro ao Sistema Agroverso</h2>
+  <!-- 🧩 Formulário Principal de Autenticação -->
+  <main class="login-container" role="main" aria-label="Área principal de autenticação do sistema Agroverso">
+    <section class="login-box" role="form" aria-labelledby="login-titulo">
+      <h2 id="login-titulo" class="login-title">Acesso Seguro ao Sistema Agroverso</h2>
 
-      <form id="form-login" class="login-form" method="POST" novalidate>
-        <p class="login-info">
-          Use seu e-mail institucional, senha e selecione o perfil de acesso.
-          Pressione <kbd>Enter</kbd> para autenticar ou <kbd>F1</kbd> para suporte.
+      <form id="form-login" class="login-form" method="POST" novalidate aria-describedby="login-info">
+        <p id="login-info" class="login-info">
+          Use seu e-mail institucional, senha pessoal e selecione o perfil de acesso.  
+          Pressione <kbd>Enter</kbd> para entrar ou <kbd>F1</kbd> para suporte.
         </p>
 
         <label for="email">E-mail institucional:</label>
         <input type="email" id="email" name="email" class="input-base" placeholder="seunome@agroverso.tec.br" required />
 
         <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" class="input-base" placeholder="••••••••" required minlength="6" />
+        <input type="password" id="senha" name="senha" class="input-base" placeholder="••••••••" minlength="6" required />
 
         <label for="perfil">Perfil de Acesso:</label>
         <select id="perfil" name="perfil" class="input-base" required>
@@ -42,19 +55,26 @@
           <option value="tecnico">Técnico de Campo</option>
         </select>
 
-        <button type="submit" class="btn-primary">Entrar</button>
+        <button type="submit" class="btn-primary" aria-label="Entrar no sistema Agroverso">Entrar</button>
 
         <p class="login-error" id="erro-login" role="alert" hidden>
-          E-mail, senha ou perfil inválidos. Tente novamente.
+          E-mail, senha ou perfil inválidos. Verifique os dados e tente novamente.
         </p>
       </form>
 
+      <!-- 🔙 Botão de Retorno Estético -->
       <div class="voltar-home">
-        <a href="index.html" class="btn-voltar">← Voltar para a Página Inicial</a>
+        <a href="index.html" class="btn-voltar" aria-label="Voltar para a Página Inicial">
+          <img src="assets/images/v-pg-ini.png" alt="Voltar para a Página Inicial" class="icone-voltar" />
+        </a>
       </div>
     </section>
   </main>
 
-  <div data-include="partials/footer.html"></div>
+  <!-- 🔁 Includes e Scripts -->
+  <script src="scripts/includes.js" defer></script>
+  <script src="scripts/auth.js" defer></script>
+  <script src="scripts/login.js" defer></script>
+
 </body>
 </html>
