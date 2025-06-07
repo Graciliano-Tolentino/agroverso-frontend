@@ -1,0 +1,91 @@
+/* =============================================================================================
+📄 irrigacao.css – Estilo exclusivo da página de Irrigação Inteligente • Agroverso
+🌿 Inspirado na terra úmida, microclimas e controle inteligente da água
+============================================================================================= */
+
+:root {
+  --cor-produto: #7bb661;        /* Verde regenerativo */
+  --cor-hover: #5fa446;          /* Verde mais escuro em foco */
+  --cor-fundo-irrigacao: #f4fdf6;
+  --cor-texto-irrigacao: #1c2d21;
+  --sombra-suave: 0 0 14px rgba(123, 182, 97, 0.12);
+}
+
+/* 🧠 Título Principal */
+.titulo-produto {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--cor-produto);
+  text-align: center;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 1px 2px rgba(123, 182, 97, 0.25);
+  letter-spacing: 0.5px;
+}
+
+/* 💧 Seção descritiva */
+.descricao-produto {
+  background-color: var(--cor-fundo-irrigacao);
+  padding: 2.5rem 2.2rem;
+  border-radius: 14px;
+  font-size: 1.08rem;
+  color: var(--cor-texto-irrigacao);
+  line-height: 1.68;
+  box-shadow: var(--sombra-suave);
+  margin-top: 1.5rem;
+}
+
+/* 🌾 Lista técnica */
+.descricao-produto ul {
+  list-style: none;
+  padding-left: 1.4rem;
+  margin-top: 1.2rem;
+}
+
+.descricao-produto li {
+  padding-left: 1.6rem;
+  position: relative;
+  font-weight: 500;
+  color: #264c34;
+  margin-bottom: 0.7rem;
+}
+
+.descricao-produto li::before {
+  content: "🌿";
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+  top: 0.15rem;
+}
+
+/* 📲 Botão de Conversão */
+.botao-acao {
+  background-color: var(--cor-produto);
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 2.4rem;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1.5rem;
+  box-shadow: 0 0 12px rgba(123, 182, 97, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.botao-acao:hover {
+  background-color: var(--cor-hover);
+  transform: scale(1.04);
+}
+
+/* 🖼️ Carrossel Regenerativo */
+.carrossel img {
+  border-radius: 12px;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.carrossel img:hover {
+  transform: scale(1.025);
+  box-shadow: 0 0 18px rgba(91, 138, 91, 0.2);
+}
