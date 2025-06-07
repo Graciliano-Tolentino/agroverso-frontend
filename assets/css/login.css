@@ -1,0 +1,181 @@
+/* ==========================================================================================
+🔐 login.css – Tela de Login Agroverso
+🌱 Estética regenerativa, acessibilidade plena, responsividade consciente
+========================================================================================== */
+
+/* 🌐 Variáveis Globais Temáticas */
+:root {
+  --cor-principal: #1C3D27;
+  --cor-destaque: #025e36;
+  --cor-clara: #ffffff;
+  --cor-media: #eaf3ed;
+  --cor-texto: #222222;
+  --cor-borda: #cccccc;
+  --cor-erro: #b20000;
+  --cor-alerta: #ffcc00;
+
+  --espaco-xs: 0.25rem;
+  --espaco-sm: 0.5rem;
+  --espaco-md: 1rem;
+  --espaco-lg: 1.5rem;
+  --espaco-xl: 2rem;
+
+  --sombra-media: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --sombra-profunda: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 🧍 Corpo da Página */
+.login-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, var(--cor-media), var(--cor-clara));
+  font-family: 'Segoe UI', 'Poppins', sans-serif;
+  padding-top: var(--espaco-xl);
+  color: var(--cor-texto);
+}
+
+/* 📦 Container Central */
+.login-container {
+  max-width: 420px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: var(--cor-clara);
+  padding: var(--espaco-xl) var(--espaco-md);
+  border-radius: 16px;
+  box-shadow: var(--sombra-profunda);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-md);
+  transition: box-shadow 0.3s ease;
+}
+
+/* 📋 Título */
+.login-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--cor-principal);
+  text-align: center;
+  margin-bottom: var(--espaco-sm);
+}
+
+/* 🧠 Texto de apoio */
+.login-info {
+  font-size: 0.95rem;
+  color: var(--cor-texto);
+  line-height: 1.5;
+  margin-bottom: var(--espaco-sm);
+}
+
+/* 🧾 Formulário */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-sm);
+}
+
+.login-form label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.input-base {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--cor-borda);
+  font-size: 1rem;
+  background-color: var(--cor-clara);
+  color: var(--cor-texto);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-base:focus {
+  outline: none;
+  border-color: var(--cor-principal);
+  box-shadow: 0 0 0 3px rgba(28, 61, 39, 0.1);
+}
+
+/* 🔘 Botão Primário */
+.btn-primary {
+  background-color: var(--cor-principal);
+  color: var(--cor-clara);
+  font-weight: bold;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--cor-destaque);
+  transform: scale(1.02);
+}
+
+/* ⚠️ Erros Visuais */
+.login-error {
+  color: var(--cor-erro);
+  background-color: #fdeaea;
+  padding: var(--espaco-sm) var(--espaco-md);
+  border-left: 4px solid var(--cor-alerta);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.login-error[hidden] {
+  display: none !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔙 Voltar */
+.voltar-home {
+  margin-top: var(--espaco-md);
+  text-align: center;
+}
+
+.btn-voltar {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: transparent;
+  color: var(--cor-principal);
+  border: 2px solid var(--cor-principal);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background-color: var(--cor-principal);
+  color: var(--cor-clara);
+}
+
+/* 📱 Responsividade */
+@media (max-width: 480px) {
+  .login-container {
+    padding: var(--espaco-lg) var(--espaco-sm);
+  }
+
+  .login-title {
+    font-size: 1.3rem;
+  }
+
+  .input-base,
+  .btn-primary {
+    font-size: 0.95rem;
+  }
+}
