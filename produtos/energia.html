@@ -32,20 +32,14 @@
   <link rel="stylesheet" href="assets/css/produtos.css" />
   <link rel="stylesheet" href="assets/css/carrossel.css" />
   <link rel="stylesheet" href="assets/css/responsivo.css" />
+
+  <!-- 🧩 Includes automáticos -->
+  <script src="scripts/core/includes.js" defer></script>
 </head>
 
 <body>
-  <!-- ⬆️ Cabeçalho institucional -->
-  <header class="header-principal" role="banner">
-    <a href="index.html" class="logo-link" aria-label="Voltar à página inicial do Agroverso">
-      <img src="assets/images/logo.png" alt="Logotipo do Agroverso" class="logo" decoding="async" loading="eager" />
-    </a>
-    <h1 class="titulo-site">Agroverso</h1>
-    <p class="slogan">
-      Tecnologia regenerativa com <strong>sabedoria</strong>,
-      <strong>força</strong> e <strong>beleza</strong>
-    </p>
-  </head>
+  <!-- 🔁 Cabeçalho modular -->
+  <div data-include="partials/header.html"></div>
 
   <!-- ⚡ Conteúdo principal -->
   <main class="conteudo-produto" role="main" aria-labelledby="titulo-energia">
@@ -102,26 +96,13 @@
         </a>
       </div>
     </section>
-
   </main>
 
-  <!-- 🧭 Rodapé Institucional -->
-  <footer class="rodape-site" role="contentinfo">
-    <p>
-      © 2025 AGROVERSO
-</p> Uma iniciativa do
-<p>      
-<a>Instituto Graciliana Maria da Conceição</a>.
-</p>
-    
-    <p>
-      CNPJ: 31.083.093/0001-99 • Todos os direitos reservados.
-    </p>
-  </footer>
+  <!-- 🔁 Rodapé modular -->
+  <div data-include="partials/footer.html"></div>
 
-  <!-- 🧠 Scripts Essenciais -->
-  <script src="scripts/router-auto.js" defer></script>
-  <script src="scripts/menu-lateral.js" defer></script>
-  <script src="scripts/auth.js" defer></script>
+  <!-- 🧠 Scripts corretos -->
+  <script src="scripts/dashboards/menu-lateral.js" defer></script>
+  <script src="scripts/core/auth.js" defer></script>
 </body>
 </html>
