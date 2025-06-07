@@ -1,0 +1,69 @@
+<!-- ========================================================================================
+📄 dashboards/hidroponia/gerente.html – Painel do Gerente de Hidroponia • Agroverso
+📈 Indicadores estratégicos, performance técnica e histórico de anomalias
+======================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#1C3D27" />
+  <title>Gerência • Hidroponia Inteligente – Agroverso</title>
+
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+  <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+  <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+
+  <script src="../../scripts/auth.js" defer></script>
+</head>
+
+<body onload="protegerPagina(['gerente'])">
+
+  <!-- Menu do módulo -->
+  <div data-include="../../partials/menu-hidroponia.html"></div>
+
+  <!-- Conteúdo central -->
+  <main class="painel-container" role="main" aria-label="Painel Gerencial de Hidroponia">
+    <section class="painel-header">
+      <h1 class="painel-titulo">Painel do Gerente – Hidroponia</h1>
+      <p class="painel-subtitulo">Desempenho operacional, médias técnicas e alertas registrados</p>
+    </section>
+
+    <section class="painel-conteudo">
+      <!-- Indicadores Médios -->
+      <div class="cartao-dado">
+        <h2>📊 Indicadores Técnicos</h2>
+        <ul>
+          <li>Temperatura média da solução: <strong>22.9°C</strong></li>
+          <li>pH médio diário: <strong>6.0</strong></li>
+          <li>Condutividade média: <strong>1.78 mS/cm</strong></li>
+        </ul>
+      </div>
+
+      <!-- Desempenho das Estufas -->
+      <div class="cartao-dado">
+        <h2>🏡 Estufas em Operação</h2>
+        <ul>
+          <li>Estufa 1: ✅ 98% eficiência</li>
+          <li>Estufa 2: ⚠️ 85% – perda de condutividade</li>
+          <li>Estufa 3: ✅ 95% – operação estável</li>
+        </ul>
+      </div>
+
+      <!-- Histórico de Anomalias -->
+      <div class="cartao-dado">
+        <h2>🚨 Histórico de Alertas</h2>
+        <ul>
+          <li>04/06 – EC abaixo do mínimo – Estufa 2</li>
+          <li>03/06 – Falha no sensor de pH – Estufa 1</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../scripts/includes.js" defer></script>
+  <script src="../../scripts/dashboards/hidroponia.js" defer></script>
+</body>
+</html>

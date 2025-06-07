@@ -1,0 +1,68 @@
+<!-- ========================================================================================
+📄 dashboards/hidroponia/tecnico.html – Painel do Técnico de Hidroponia • Agroverso
+🧪 Execução técnica precisa, controle dos nutrientes e resposta rápida a desvios críticos
+======================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#1C3D27" />
+  <title>Painel Técnico • Hidroponia Inteligente – Agroverso</title>
+
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+  <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+  <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+
+  <script src="../../scripts/auth.js" defer></script>
+</head>
+
+<body onload="protegerPagina(['tecnico'])">
+
+  <!-- Menu Lateral Temático -->
+  <div data-include="../../partials/menu-hidroponia.html"></div>
+
+  <!-- Conteúdo Principal -->
+  <main class="painel-container" role="main" aria-label="Painel Técnico de Hidroponia">
+    <section class="painel-header">
+      <h1 class="painel-titulo">Painel Técnico – Hidroponia</h1>
+      <p class="painel-subtitulo">Monitoramento da solução nutritiva e ativação de bombas</p>
+    </section>
+
+    <section class="painel-conteudo">
+      <!-- Parâmetros da Solução -->
+      <div class="cartao-dado">
+        <h2>🌡️ Temperatura da Solução</h2>
+        <p id="temp-solucao">22.4°C</p>
+      </div>
+
+      <div class="cartao-dado">
+        <h2>💧 Nível do Reservatório</h2>
+        <p id="nivel-reservatorio">82%</p>
+      </div>
+
+      <div class="cartao-dado">
+        <h2>⚗️ pH Atual</h2>
+        <p id="ph">6.2</p>
+      </div>
+
+      <div class="cartao-dado">
+        <h2>⚡ Condutividade Elétrica (EC)</h2>
+        <p id="ec">1.8 mS/cm</p>
+      </div>
+
+      <!-- Ação rápida -->
+      <div class="cartao-acao">
+        <button class="btn-acao" onclick="alert('Bomba acionada por comando manual.')">
+          🚀 Ativar Bomba de Nutrientes
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../scripts/includes.js" defer></script>
+  <script src="../../scripts/dashboards/hidroponia.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!-- ========================================================================================
+📄 dashboards/energia/gerente.html – Painel Gerencial de Energia Solar • Agroverso
+📊 Visão gerencial com métricas de eficiência, histórico de geração e alertas técnicos
+======================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#1C3D27" />
+  <title>Gerência de Energia • Agroverso</title>
+
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+  <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+  <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+
+  <script src="../../scripts/auth.js" defer></script>
+</head>
+
+<body onload="protegerPagina(['gerente'])">
+
+  <!-- Menu lateral do módulo -->
+  <div data-include="../../partials/menu-energia.html"></div>
+
+  <!-- Conteúdo principal -->
+  <main class="painel-container" role="main" aria-label="Painel Gerencial de Energia Solar">
+    <section class="painel-header">
+      <h1 class="painel-titulo">Painel do Gerente – Energia Solar</h1>
+      <p class="painel-subtitulo">Indicadores de produção, alarmes críticos e relatórios técnicos</p>
+    </section>
+
+    <section class="painel-conteudo">
+
+      <!-- ⚡ Eficiência Global -->
+      <div class="cartao-dado">
+        <h2>⚡ Eficiência Global do Sistema</h2>
+        <ul>
+          <li>Produção total no mês: <strong>14.320 kWh</strong></li>
+          <li>Desempenho médio por setor: <strong>93.7%</strong></li>
+          <li>Meta institucional: <strong>95%</strong></li>
+        </ul>
+      </div>
+
+      <!-- 📍 Monitoramento Setorial -->
+      <div class="cartao-dado">
+        <h2>📍 Análise de Setores</h2>
+        <ul>
+          <li>Setor 1: 4.6 kW – estável</li>
+          <li>Setor 2: 3.2 kW – ⚠️ abaixo do ideal</li>
+          <li>Setor 3: 4.9 kW – excelente</li>
+        </ul>
+      </div>
+
+      <!-- 🚨 Alertas Registrados -->
+      <div class="cartao-dado">
+        <h2>🚨 Alertas Técnicos</h2>
+        <ul>
+          <li>06/06 – Inversor 2 instável – Setor 2</li>
+          <li>04/06 – Oscilação de tensão – Setor 1</li>
+        </ul>
+      </div>
+
+      <!-- 📁 Relatórios -->
+      <div class="cartao-dado">
+        <h2>📁 Relatórios Disponíveis</h2>
+        <ul>
+          <li><a href="#">🔎 Comparativo de Setores (PDF)</a></li>
+          <li><a href="#">📊 Relatório de Geração Mensal</a></li>
+          <li><a href="#">🧾 Log de Alertas Técnicos</a></li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="../../scripts/includes.js" defer></script>
+  <script src="../../scripts/dashboards/energia.js" defer></script>
+</body>
+</html>

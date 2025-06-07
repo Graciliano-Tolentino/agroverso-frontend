@@ -1,0 +1,66 @@
+<!-- ========================================================================================
+📄 dashboards/energia/tecnico.html – Painel Técnico de Energia Solar • Agroverso
+🔌 Operação de campo com leitura de geração, falhas e status em tempo real
+======================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#1C3D27" />
+  <title>Painel Técnico • Energia Solar – Agroverso</title>
+
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+  <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+  <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+
+  <script src="../../scripts/auth.js" defer></script>
+</head>
+
+<body onload="protegerPagina(['tecnico'])">
+
+  <!-- Menu lateral temático -->
+  <div data-include="../../partials/menu-energia.html"></div>
+
+  <!-- Painel técnico -->
+  <main class="painel-container" role="main" aria-label="Painel Técnico de Energia Solar">
+    <section class="painel-header">
+      <h1 class="painel-titulo">Painel Técnico – Energia Solar</h1>
+      <p class="painel-subtitulo">Leitura de geração em tempo real e status de equipamentos</p>
+    </section>
+
+    <section class="painel-conteudo">
+      <!-- Geração em tempo real -->
+      <div class="cartao-dado">
+        <h2>⚡ Geração Atual</h2>
+        <p id="geracao">3.42 kW</p>
+      </div>
+
+      <div class="cartao-dado">
+        <h2>☀️ Irradiância Solar</h2>
+        <p id="irradiancia">786 W/m²</p>
+      </div>
+
+      <div class="cartao-dado">
+        <h2>🔁 Status dos Inversores</h2>
+        <ul id="status-inversores">
+          <li>Inversor 1: ✅ Operando</li>
+          <li>Inversor 2: ⚠️ Intermitente</li>
+        </ul>
+      </div>
+
+      <!-- Ação de campo -->
+      <div class="cartao-acao">
+        <button class="btn-acao" onclick="alert('Procedimento de verificação iniciado.')">
+          🔍 Iniciar Verificação de Equipamentos
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../scripts/includes.js" defer></script>
+  <script src="../../scripts/dashboards/energia.js" defer></script>
+</body>
+</html>

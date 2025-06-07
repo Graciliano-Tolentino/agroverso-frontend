@@ -1,0 +1,67 @@
+<!-- ========================================================================================
+📁 partials/menu-irrigacao.html – Menu Lateral para Módulo de Irrigação • Agroverso
+🌿 Acesso contextual por perfil, visual regenerativo e navegação ética
+======================================================================================== -->
+
+<nav id="menuPrivado" class="menu-lateral" hidden aria-label="Menu lateral do módulo de irrigação">
+  <ul class="menu-lista">
+
+    <!-- Cabeçalho do menu -->
+    <li class="menu-titulo">
+      🌱 Irrigação Inteligente
+    </li>
+
+    <!-- Painel Principal (redireciona com base no perfil ativo) -->
+    <li>
+      <a href="#" onclick="redirecionarDashboard()">🔍 Painel Inicial</a>
+    </li>
+
+    <!-- Acesso por função -->
+    <li class="menu-secao">📂 Funcionalidades</li>
+
+    <!-- Itens disponíveis apenas a determinados perfis -->
+    <li data-perfil="administrador gerente">
+      <a href="dashboards/irrigacao/admin.html">⚙️ Administração</a>
+    </li>
+
+    <li data-perfil="gerente lider">
+      <a href="dashboards/irrigacao/gerente.html">📋 Gestão de Equipe</a>
+    </li>
+
+    <li data-perfil="lider tecnico">
+      <a href="dashboards/irrigacao/tecnico.html">💧 Operações em Campo</a>
+    </li>
+
+    <!-- Sair -->
+    <li>
+      <a href="#" onclick="logout()">🚪 Sair</a>
+    </li>
+
+  </ul>
+</nav>
+
+<script>
+  // Redireciona para o dashboard adequado com base no perfil
+  function redirecionarDashboard() {
+    const perfil = sessionStorage.getItem("usuario_perfil");
+    const rotas = {
+      administrador: "dashboards/irrigacao/admin.html",
+      gerente: "dashboards/irrigacao/gerente.html",
+      lider: "dashboards/irrigacao/lider.html",
+      tecnico: "dashboards/irrigacao/tecnico.html",
+    };
+    if (rotas[perfil]) window.location.href = rotas[perfil];
+    else window.location.href = "login.html";
+  }
+
+  // Aplica controle de visibilidade por perfil
+  document.addEventListener("DOMContentLoaded", () => {
+    const perfilAtual = sessionStorage.getItem("usuario_perfil");
+    document.querySelectorAll("[data-perfil]").forEach((item) => {
+      const perfisAutorizados = item.getAttribute("data-perfil").split(" ");
+      if (!perfisAutorizados.includes(perfilAtual)) {
+        item.style.display = "none";
+      }
+    });
+  });
+</script>

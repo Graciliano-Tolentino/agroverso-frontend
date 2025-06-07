@@ -1,0 +1,39 @@
+/* ==========================================================================================
+📄 modulos/footer.css – Rodapé institucional responsivo • Agroverso
+🌍 Design regenerativo, leve, institucional e funcional
+========================================================================================== */
+
+@import url("../base/variaveis.css");
+
+.rodape {
+  background-color: var(--cor-principal);
+  color: var(--cor-clara);
+  text-align: center;
+  padding: var(--espaco-lg) var(--espaco-md);
+  font-size: 0.9rem;
+  font-family: var(--fonte-principal);
+  border-top: 3px solid var(--cor-destaque);
+}
+
+.rodape a {
+  color: var(--cor-clara);
+  text-decoration: underline dotted;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.rodape a:hover {
+  color: var(--cor-alerta);
+}
+
+.rodape p {
+  margin: 0.4rem 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .rodape {
+    font-size: 0.85rem;
+    padding: var(--espaco-md);
+  }
+}

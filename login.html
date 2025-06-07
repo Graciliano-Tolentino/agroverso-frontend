@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#1C3D27" />
+  <title>Login • Agroverso</title>
+
+  <link rel="stylesheet" href="assets/css/principal.css" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <script src="scripts/core/includes.js" defer></script>
+  <script src="scripts/core/auth.js" defer></script>
+  <script src="scripts/modulos/login.js" defer></script>
+</head>
+
+<body class="login-body">
+  <div data-include="partials/header.html"></div>
+
+  <main class="login-container" role="main" aria-label="Área de login do sistema Agroverso">
+    <section class="login-box">
+      <h2 class="login-title">Acesso Seguro ao Sistema Agroverso</h2>
+
+      <form id="form-login" class="login-form" method="POST" novalidate>
+        <p class="login-info">
+          Use seu e-mail institucional, senha e selecione o perfil de acesso.
+          Pressione <kbd>Enter</kbd> para autenticar ou <kbd>F1</kbd> para suporte.
+        </p>
+
+        <label for="email">E-mail institucional:</label>
+        <input type="email" id="email" name="email" class="input-base" placeholder="seunome@agroverso.tec.br" required />
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" class="input-base" placeholder="••••••••" required minlength="6" />
+
+        <label for="perfil">Perfil de Acesso:</label>
+        <select id="perfil" name="perfil" class="input-base" required>
+          <option value="">Selecione seu perfil</option>
+          <option value="administrador">Administrador Geral</option>
+          <option value="gerente">Gerente</option>
+          <option value="lider">Líder de Equipe</option>
+          <option value="tecnico">Técnico de Campo</option>
+        </select>
+
+        <button type="submit" class="btn-primary">Entrar</button>
+
+        <p class="login-error" id="erro-login" role="alert" hidden>
+          E-mail, senha ou perfil inválidos. Tente novamente.
+        </p>
+      </form>
+
+      <div class="voltar-home">
+        <a href="index.html" class="btn-voltar">← Voltar para a Página Inicial</a>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="partials/footer.html"></div>
+</body>
+</html>

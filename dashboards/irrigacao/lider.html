@@ -1,0 +1,66 @@
+<!-- ========================================================================================
+📄 dashboards/irrigacao/lider.html – Painel do Líder de Equipe de Irrigação • Agroverso
+🧭 Supervisão direta da operação de campo, gestão simplificada e acompanhamento regenerativo
+======================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#1C3D27" />
+  <title>Líder de Irrigação • Agroverso</title>
+
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+  <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+  <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+
+  <script src="../../scripts/auth.js" defer></script>
+</head>
+
+<body onload="protegerPagina(['lider'])">
+
+  <!-- 🔗 Menu lateral do módulo -->
+  <div data-include="../../partials/menu-irrigacao.html"></div>
+
+  <!-- 🎯 Conteúdo principal -->
+  <main class="painel-container" role="main" aria-label="Painel do Líder de Equipe de Irrigação">
+    <section class="painel-header">
+      <h1 class="painel-titulo">Painel do Líder – Irrigação</h1>
+      <p class="painel-subtitulo">Visão geral das operações e dos técnicos em campo</p>
+    </section>
+
+    <section class="painel-conteudo">
+      <!-- ✅ Check-in de técnicos -->
+      <div class="cartao-dado">
+        <h2>📍 Técnicos em Campo</h2>
+        <ul id="tecnicos-em-campo">
+          <li>João Silva – Setor 1 – ✅ Ativo</li>
+          <li>Camila Rocha – Setor 2 – ⏳ Em deslocamento</li>
+          <li>Rafael Costa – Setor 3 – ❌ Ausente</li>
+        </ul>
+      </div>
+
+      <!-- 📝 Ações de liderança -->
+      <div class="cartao-dado">
+        <h2>📝 Ordens de Serviço Emitidas</h2>
+        <ul>
+          <li>Ordem #145 – Ativação da Válvula 2 – ⏳ Aguardando execução</li>
+          <li>Ordem #144 – Coleta manual de umidade – ✅ Finalizada</li>
+        </ul>
+      </div>
+
+      <!-- 📬 Canal direto com técnicos -->
+      <div class="cartao-acao">
+        <button class="btn-acao" onclick="alert('Canal de mensagem com técnicos aberto.')">
+          📬 Enviar Comunicação Urgente
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../scripts/includes.js" defer></script>
+  <script src="../../scripts/dashboards/irrigacao.js" defer></script>
+</body>
+</html>

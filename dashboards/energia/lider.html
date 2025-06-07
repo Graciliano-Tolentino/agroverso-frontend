@@ -1,0 +1,78 @@
+<!-- ========================================================================================
+📄 dashboards/energia/lider.html – Painel do Líder Técnico de Energia Solar • Agroverso
+🧭 Supervisão de técnicos, status por setor e gestão tática de manutenção
+======================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#1C3D27" />
+  <title>Liderança Técnica • Energia Solar – Agroverso</title>
+
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+  <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+  <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+
+  <script src="../../scripts/auth.js" defer></script>
+</head>
+
+<body onload="protegerPagina(['lider'])">
+
+  <!-- Menu lateral -->
+  <div data-include="../../partials/menu-energia.html"></div>
+
+  <!-- Conteúdo do painel -->
+  <main class="painel-container" role="main" aria-label="Painel do Líder Técnico de Energia Solar">
+    <section class="painel-header">
+      <h1 class="painel-titulo">Painel do Líder – Energia Solar</h1>
+      <p class="painel-subtitulo">Status da equipe técnica e desempenho setorial</p>
+    </section>
+
+    <section class="painel-conteudo">
+
+      <!-- 👷 Técnicos em Campo -->
+      <div class="cartao-dado">
+        <h2>👷 Técnicos em Operação</h2>
+        <ul>
+          <li>Eduardo Lima – Setor 1 – ✅ Monitorando</li>
+          <li>Rafaela Nunes – Setor 2 – ⚠️ Com falha identificada</li>
+          <li>Thiago Cruz – Setor 3 – ⏳ Executando manutenção</li>
+        </ul>
+      </div>
+
+      <!-- 🔋 Geração por Setor -->
+      <div class="cartao-dado">
+        <h2>🔋 Geração por Setor</h2>
+        <ul>
+          <li>Setor 1: 4.2 kW</li>
+          <li>Setor 2: 3.1 kW (queda de desempenho)</li>
+          <li>Setor 3: 4.8 kW</li>
+        </ul>
+      </div>
+
+      <!-- 📛 Incidentes Recentes -->
+      <div class="cartao-dado">
+        <h2>📛 Incidentes Reportados</h2>
+        <ul>
+          <li>06/06 – Inversor 2 oscilando – Setor 2</li>
+          <li>05/06 – Painel com sombreamento parcial – Setor 3</li>
+        </ul>
+      </div>
+
+      <!-- 📬 Ação -->
+      <div class="cartao-acao">
+        <button class="btn-acao" onclick="alert('Ordem de reforço enviada ao Setor 2.')">
+          📬 Enviar Ordem de Intervenção
+        </button>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="../../scripts/includes.js" defer></script>
+  <script src="../../scripts/dashboards/energia.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!-- ========================================================================================
+📄 dashboards/irrigacao/gerente.html – Painel do Gerente de Irrigação • Agroverso
+📊 Supervisão estratégica, produtividade regenerativa e visão panorâmica de operação
+======================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#1C3D27" />
+  <title>Gerência de Irrigação • Agroverso</title>
+
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+  <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+  <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+
+  <script src="../../scripts/auth.js" defer></script>
+</head>
+
+<body onload="protegerPagina(['gerente'])">
+
+  <!-- 🔗 Menu lateral do módulo -->
+  <div data-include="../../partials/menu-irrigacao.html"></div>
+
+  <!-- 🎯 Conteúdo principal -->
+  <main class="painel-container" role="main" aria-label="Painel Gerencial de Irrigação">
+    <section class="painel-header">
+      <h1 class="painel-titulo">Painel do Gerente – Irrigação</h1>
+      <p class="painel-subtitulo">Planejamento técnico, eficiência hídrica e desempenho da equipe</p>
+    </section>
+
+    <section class="painel-conteudo">
+      <!-- 🌐 Eficiência Operacional -->
+      <div class="cartao-dado">
+        <h2>🌐 Eficiência de Irrigação</h2>
+        <p>Média de aproveitamento hídrico: <strong>91.4%</strong></p>
+        <p>Meta institucional: <strong>95%</strong></p>
+      </div>
+
+      <!-- 👥 Desempenho da Equipe -->
+      <div class="cartao-dado">
+        <h2>👥 Desempenho Técnico</h2>
+        <ul>
+          <li>João Silva: 98% de execuções no prazo</li>
+          <li>Camila Rocha: 94% de acurácia de dados</li>
+          <li>Rafael Costa: 88% de presença em campo</li>
+        </ul>
+      </div>
+
+      <!-- 📈 Relatórios -->
+      <div class="cartao-dado">
+        <h2>📈 Relatórios Disponíveis</h2>
+        <ul>
+          <li><a href="#">🔍 Relatório de Consumo por Setor</a></li>
+          <li><a href="#">📄 Eficiência por Técnico</a></li>
+          <li><a href="#">📊 Histórico de Execuções</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../scripts/includes.js" defer></script>
+  <script src="../../scripts/dashboards/irrigacao.js" defer></script>
+</body>
+</html>

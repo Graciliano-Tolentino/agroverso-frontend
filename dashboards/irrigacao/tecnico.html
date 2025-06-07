@@ -1,0 +1,72 @@
+<!-- ========================================================================================
+📄 dashboards/irrigacao/tecnico.html – Painel do Técnico de Irrigação • Agroverso
+💧 Interface regenerativa voltada para execução prática em campo, com dados críticos e ações rápidas
+======================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#1C3D27" />
+  <title>Painel Técnico • Irrigação Inteligente – Agroverso</title>
+
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+  <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+
+  <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+
+  <script src="../../scripts/auth.js" defer></script>
+</head>
+
+<body onload="protegerPagina(['tecnico'])">
+
+  <!-- Menu lateral específico do módulo -->
+  <div data-include="../../partials/menu-irrigacao.html"></div>
+
+  <!-- Conteúdo principal -->
+  <main class="painel-container" role="main" aria-label="Painel Técnico de Irrigação">
+    <section class="painel-header">
+      <h1 class="painel-titulo">Painel do Técnico – Irrigação Inteligente</h1>
+      <p class="painel-subtitulo">Monitoramento de sensores, status de válvulas e execução de rotinas</p>
+    </section>
+
+    <!-- Dados principais -->
+    <section class="painel-conteudo">
+      <div class="cartao-dado">
+        <h2>🌡️ Temperatura do Solo</h2>
+        <p id="temp-solo">26.3°C</p>
+      </div>
+
+      <div class="cartao-dado">
+        <h2>💧 Umidade Atual</h2>
+        <p id="umidade">42%</p>
+      </div>
+
+      <div class="cartao-dado">
+        <h2>⏱️ Última Irrigação</h2>
+        <p id="ultima-irrigacao">Hoje às 08:30</p>
+      </div>
+
+      <div class="cartao-dado">
+        <h2>🧠 Status das Válvulas</h2>
+        <ul id="status-valvulas">
+          <li>Setor 1: ✅ Ativa</li>
+          <li>Setor 2: ⏳ Programada</li>
+          <li>Setor 3: ❌ Inativa</li>
+        </ul>
+      </div>
+
+      <div class="cartao-acao">
+        <button class="btn-acao" onclick="alert('Simulação de abertura de válvulas iniciada.')">
+          🚀 Executar Irrigação Manual
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../scripts/includes.js" defer></script>
+  <script src="../../scripts/dashboards/irrigacao.js" defer></script>
+</body>
+</html>

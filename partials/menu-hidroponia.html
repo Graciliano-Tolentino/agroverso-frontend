@@ -1,0 +1,67 @@
+<!-- ========================================================================================
+📁 partials/menu-hidroponia.html – Menu Lateral para Módulo de Hidroponia • Agroverso
+🌱 Interface modular, perfis segmentados, clareza regenerativa e navegação viva
+======================================================================================== -->
+
+<nav id="menuPrivado" class="menu-lateral" hidden aria-label="Menu lateral do módulo de hidroponia">
+  <ul class="menu-lista">
+
+    <!-- Cabeçalho do menu -->
+    <li class="menu-titulo">
+      🌿 Hidroponia Inteligente
+    </li>
+
+    <!-- Painel por perfil -->
+    <li>
+      <a href="#" onclick="redirecionarDashboard()">🔍 Painel Inicial</a>
+    </li>
+
+    <!-- Seção funcional -->
+    <li class="menu-secao">📂 Funcionalidades</li>
+
+    <!-- Controle administrativo -->
+    <li data-perfil="administrador gerente">
+      <a href="dashboards/hidroponia/admin.html">⚙️ Administração</a>
+    </li>
+
+    <li data-perfil="gerente lider">
+      <a href="dashboards/hidroponia/gerente.html">📊 Gestão de Cultivo</a>
+    </li>
+
+    <li data-perfil="lider tecnico">
+      <a href="dashboards/hidroponia/tecnico.html">🧪 Monitoramento de Parâmetros</a>
+    </li>
+
+    <!-- Sair -->
+    <li>
+      <a href="#" onclick="logout()">🚪 Sair</a>
+    </li>
+
+  </ul>
+</nav>
+
+<script>
+  // Redireciona com base no perfil do usuário para o dashboard adequado
+  function redirecionarDashboard() {
+    const perfil = sessionStorage.getItem("usuario_perfil");
+    const rotas = {
+      administrador: "dashboards/hidroponia/admin.html",
+      gerente: "dashboards/hidroponia/gerente.html",
+      lider: "dashboards/hidroponia/lider.html",
+      tecnico: "dashboards/hidroponia/tecnico.html",
+    };
+    if (rotas[perfil]) window.location.href = rotas[perfil];
+    else window.location.href = "login.html";
+  }
+
+  // Exibe ou oculta itens conforme o perfil
+  document.addEventListener("DOMContentLoaded", () => {
+    const perfilAtual = sessionStorage.getItem("usuario_perfil");
+    document.querySelectorAll("[data-perfil]").forEach((item) => {
+      const perfisPermitidos = item.getAttribute("data-perfil").split(" ");
+      if (!perfisPermitidos.includes(perfilAtual)) {
+        item.style.display = "none";
+      }
+    });
+  });
+</script>

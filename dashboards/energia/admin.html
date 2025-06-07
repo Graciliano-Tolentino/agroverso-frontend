@@ -1,0 +1,80 @@
+<!-- ========================================================================================
+📄 dashboards/energia/admin.html – Painel Administrativo de Energia Solar • Agroverso
+🛠️ Controle global, usuários, parâmetros técnicos e indicadores de desempenho energético
+======================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#1C3D27" />
+  <title>Administração Geral • Energia Solar – Agroverso</title>
+
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+  <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+  <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+
+  <script src="../../scripts/auth.js" defer></script>
+</head>
+
+<body onload="protegerPagina(['administrador'])">
+
+  <!-- Menu lateral -->
+  <div data-include="../../partials/menu-energia.html"></div>
+
+  <!-- Painel principal -->
+  <main class="painel-container" role="main" aria-label="Painel Administrativo de Energia Solar">
+    <section class="painel-header">
+      <h1 class="painel-titulo">Administração Geral – Energia Solar</h1>
+      <p class="painel-subtitulo">Controle completo da operação fotovoltaica e dos usuários do sistema</p>
+    </section>
+
+    <section class="painel-conteudo">
+
+      <!-- 👥 Controle de Usuários -->
+      <div class="cartao-dado">
+        <h2>👥 Perfis Ativos</h2>
+        <ul>
+          <li>3 Técnicos de Campo</li>
+          <li>1 Líder de Equipe</li>
+          <li>1 Gerente Estratégico</li>
+          <li>1 Administrador Geral</li>
+        </ul>
+      </div>
+
+      <!-- ⚙️ Configurações Técnicas -->
+      <div class="cartao-dado">
+        <h2>⚙️ Parâmetros Globais</h2>
+        <ul>
+          <li>Tensão de operação nominal: <strong>600V</strong></li>
+          <li>Faixa de irradiância ideal: <strong>750–900 W/m²</strong></li>
+          <li>Limite de falhas por setor: <strong>2 alertas mensais</strong></li>
+        </ul>
+      </div>
+
+      <!-- 📊 Estatísticas Globais -->
+      <div class="cartao-dado">
+        <h2>📊 Estatísticas do Sistema</h2>
+        <ul>
+          <li>Produção total acumulada: <strong>384.200 kWh</strong></li>
+          <li>Setores monitorados: <strong>3</strong></li>
+          <li>Incidentes críticos: <strong>4 este mês</strong></li>
+        </ul>
+      </div>
+
+      <!-- Ação Administrativa -->
+      <div class="cartao-acao">
+        <button class="btn-acao" onclick="alert('Painel de gestão de usuários carregando...')">
+          🛠️ Gerenciar Usuários e Permissões
+        </button>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="../../scripts/includes.js" defer></script>
+  <script src="../../scripts/dashboards/energia.js" defer></script>
+</body>
+</html>

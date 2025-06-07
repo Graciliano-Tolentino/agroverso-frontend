@@ -1,0 +1,69 @@
+<!-- ========================================================================================
+📁 partials/menu-energia.html – Menu Lateral para Módulo de Energia Solar • Agroverso
+⚡ Interface clara, técnica e escalável para controle energético por função
+======================================================================================== -->
+
+<nav id="menuPrivado" class="menu-lateral" hidden aria-label="Menu lateral do módulo de energia solar">
+  <ul class="menu-lista">
+
+    <!-- Título institucional -->
+    <li class="menu-titulo">
+      ☀️ Energia Solar Inteligente
+    </li>
+
+    <!-- Acesso direto ao painel correspondente -->
+    <li>
+      <a href="#" onclick="redirecionarDashboard()">🔍 Painel Inicial</a>
+    </li>
+
+    <!-- Seção funcional -->
+    <li class="menu-secao">📂 Funcionalidades</li>
+
+    <!-- Administração de energia -->
+    <li data-perfil="administrador gerente">
+      <a href="dashboards/energia/admin.html">⚙️ Controle Global</a>
+    </li>
+
+    <!-- Gerenciamento energético -->
+    <li data-perfil="gerente lider">
+      <a href="dashboards/energia/gerente.html">📊 Gestão de Produção</a>
+    </li>
+
+    <!-- Execução de campo -->
+    <li data-perfil="lider tecnico">
+      <a href="dashboards/energia/tecnico.html">🔌 Monitoramento de Equipamentos</a>
+    </li>
+
+    <!-- Sair do sistema -->
+    <li>
+      <a href="#" onclick="logout()">🚪 Sair</a>
+    </li>
+
+  </ul>
+</nav>
+
+<script>
+  // Redirecionamento inteligente com base no perfil armazenado
+  function redirecionarDashboard() {
+    const perfil = sessionStorage.getItem("usuario_perfil");
+    const rotas = {
+      administrador: "dashboards/energia/admin.html",
+      gerente: "dashboards/energia/gerente.html",
+      lider: "dashboards/energia/lider.html",
+      tecnico: "dashboards/energia/tecnico.html",
+    };
+    if (rotas[perfil]) window.location.href = rotas[perfil];
+    else window.location.href = "login.html";
+  }
+
+  // Exibir apenas o que o perfil permite
+  document.addEventListener("DOMContentLoaded", () => {
+    const perfilAtual = sessionStorage.getItem("usuario_perfil");
+    document.querySelectorAll("[data-perfil]").forEach((item) => {
+      const perfis = item.getAttribute("data-perfil").split(" ");
+      if (!perfis.includes(perfilAtual)) {
+        item.style.display = "none";
+      }
+    });
+  });
+</script>

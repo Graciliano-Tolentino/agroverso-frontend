@@ -1,0 +1,67 @@
+<!-- ========================================================================================
+📄 dashboards/hidroponia/lider.html – Painel do Líder de Hidroponia • Agroverso
+🧭 Gestão de campo, conferência de parâmetros e execução de ordens diretas
+======================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#1C3D27" />
+  <title>Liderança Técnica • Hidroponia – Agroverso</title>
+
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+  <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+  <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+
+  <script src="../../scripts/auth.js" defer></script>
+</head>
+
+<body onload="protegerPagina(['lider'])">
+
+  <!-- Menu lateral temático -->
+  <div data-include="../../partials/menu-hidroponia.html"></div>
+
+  <!-- Conteúdo do painel -->
+  <main class="painel-container" role="main" aria-label="Painel do Líder Técnico de Hidroponia">
+    <section class="painel-header">
+      <h1 class="painel-titulo">Painel do Líder – Hidroponia</h1>
+      <p class="painel-subtitulo">Acompanhamento em tempo real dos técnicos e da solução nutritiva</p>
+    </section>
+
+    <section class="painel-conteudo">
+      <!-- Técnicos em campo -->
+      <div class="cartao-dado">
+        <h2>👥 Técnicos Ativos</h2>
+        <ul>
+          <li>Ana Paula – Estufa 1 – ✅ Operando</li>
+          <li>Marcos Leite – Estufa 2 – ⚠️ Aguardando insumo</li>
+          <li>Juliana Moraes – Estufa 3 – ⏳ Verificando EC</li>
+        </ul>
+      </div>
+
+      <!-- Parâmetros críticos agregados -->
+      <div class="cartao-dado">
+        <h2>📊 Parâmetros Médios da Solução</h2>
+        <ul>
+          <li>Temperatura média: 23.1°C</li>
+          <li>pH médio: 6.1</li>
+          <li>EC média: 1.82 mS/cm</li>
+        </ul>
+      </div>
+
+      <!-- Ação de comando -->
+      <div class="cartao-acao">
+        <button class="btn-acao" onclick="alert('Ordem emitida para ajuste de pH.')">
+          ⚙️ Emitir Ordem de Ajuste de pH
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../scripts/includes.js" defer></script>
+  <script src="../../scripts/dashboards/hidroponia.js" defer></script>
+</body>
+</html>

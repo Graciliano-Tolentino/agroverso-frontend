@@ -1,0 +1,75 @@
+/* ==========================================================================================
+📄 modulos/login.css – Tela de login Agroverso
+🔐 Estrutura regenerativa, acessível, clara e adaptável a múltiplos dispositivos
+========================================================================================== */
+
+@import url("../base/variaveis.css");
+@import url("../componentes/formularios.css");
+@import url("../componentes/botoes.css");
+
+.login-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, var(--cor-media), var(--cor-clara));
+  font-family: var(--fonte-principal);
+  padding-top: var(--espaco-xl);
+  color: var(--cor-texto);
+}
+
+.login-container {
+  max-width: 420px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: var(--cor-clara);
+  padding: var(--espaco-xl) var(--espaco-md);
+  border-radius: 16px;
+  box-shadow: var(--sombra-profunda);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-md);
+  transition: box-shadow 0.3s ease;
+}
+
+.login-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--cor-principal);
+  text-align: center;
+  margin-bottom: var(--espaco-sm);
+}
+
+.login-info {
+  font-size: 0.95rem;
+  color: var(--cor-texto);
+  line-height: 1.5;
+  margin-bottom: var(--espaco-sm);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-sm);
+}
+
+/* Voltar */
+.voltar-home {
+  margin-top: var(--espaco-md);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: var(--espaco-lg) var(--espaco-sm);
+  }
+
+  .login-title {
+    font-size: 1.3rem;
+  }
+
+  .input-base,
+  .btn-primary {
+    font-size: 0.95rem;
+  }
+}

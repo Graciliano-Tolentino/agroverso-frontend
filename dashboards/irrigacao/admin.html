@@ -1,0 +1,80 @@
+<!-- ========================================================================================
+📄 dashboards/irrigacao/admin.html – Painel do Administrador Geral • Módulo Irrigação
+🛠️ Gestão total do sistema, infraestrutura regenerativa e supervisão de usuários
+======================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#1C3D27" />
+  <title>Administração • Irrigação Inteligente – Agroverso</title>
+
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+  <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+  <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+
+  <script src="../../scripts/auth.js" defer></script>
+</head>
+
+<body onload="protegerPagina(['administrador'])">
+
+  <!-- Menu lateral -->
+  <div data-include="../../partials/menu-irrigacao.html"></div>
+
+  <!-- Painel Principal -->
+  <main class="painel-container" role="main" aria-label="Painel Administrativo de Irrigação">
+    <section class="painel-header">
+      <h1 class="painel-titulo">Administração Geral – Módulo Irrigação</h1>
+      <p class="painel-subtitulo">Controle estrutural, usuários do sistema e parâmetros operacionais</p>
+    </section>
+
+    <section class="painel-conteudo">
+
+      <!-- 👥 Controle de Acesso -->
+      <div class="cartao-dado">
+        <h2>👥 Perfis Ativos</h2>
+        <ul>
+          <li>4 Técnicos de Campo</li>
+          <li>2 Líderes de Equipe</li>
+          <li>1 Gerente Regional</li>
+          <li>1 Administrador Geral</li>
+        </ul>
+      </div>
+
+      <!-- 🔧 Configurações Técnicas -->
+      <div class="cartao-dado">
+        <h2>🔧 Parâmetros do Sistema</h2>
+        <ul>
+          <li>Tempo padrão de irrigação: 12 min</li>
+          <li>Nível mínimo de umidade antes da ativação: 40%</li>
+          <li>Notificações por WhatsApp: ✅ Ativadas</li>
+        </ul>
+      </div>
+
+      <!-- 📈 Estatísticas Gerais -->
+      <div class="cartao-dado">
+        <h2>📈 Estatísticas Globais</h2>
+        <ul>
+          <li>Consumo total do mês: <strong>1.240 m³</strong></li>
+          <li>Setores em operação: <strong>7 de 9</strong></li>
+          <li>Alertas de falha: <strong>2 incidentes registrados</strong></li>
+        </ul>
+      </div>
+
+      <!-- ⚙️ Ações -->
+      <div class="cartao-acao">
+        <button class="btn-acao" onclick="alert('Redirecionando para gestão de usuários...')">
+          🛠️ Gerenciar Usuários do Sistema
+        </button>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="../../scripts/includes.js" defer></script>
+  <script src="../../scripts/dashboards/irrigacao.js" defer></script>
+</body>
+</html>

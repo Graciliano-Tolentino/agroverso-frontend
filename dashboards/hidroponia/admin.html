@@ -1,0 +1,80 @@
+<!-- ========================================================================================
+📄 dashboards/hidroponia/admin.html – Painel Administrativo da Hidroponia • Agroverso
+🛠️ Supervisão institucional, configuração de parâmetros e controle de acesso
+======================================================================================== -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#1C3D27" />
+  <title>Administração Geral • Hidroponia – Agroverso</title>
+
+  <link rel="stylesheet" href="../../assets/css/estilos.css" />
+  <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+  <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon" />
+
+  <script src="../../scripts/auth.js" defer></script>
+</head>
+
+<body onload="protegerPagina(['administrador'])">
+
+  <!-- Menu lateral do módulo -->
+  <div data-include="../../partials/menu-hidroponia.html"></div>
+
+  <!-- Painel administrativo -->
+  <main class="painel-container" role="main" aria-label="Painel Administrativo de Hidroponia">
+    <section class="painel-header">
+      <h1 class="painel-titulo">Administração Geral – Hidroponia</h1>
+      <p class="painel-subtitulo">Gerencie os parâmetros críticos, usuários e configurações globais do sistema</p>
+    </section>
+
+    <section class="painel-conteudo">
+
+      <!-- Controle de Perfis -->
+      <div class="cartao-dado">
+        <h2>👥 Usuários do Módulo</h2>
+        <ul>
+          <li>3 Técnicos em operação</li>
+          <li>1 Líder responsável</li>
+          <li>1 Gerente local</li>
+          <li>1 Administrador</li>
+        </ul>
+      </div>
+
+      <!-- Configurações Globais -->
+      <div class="cartao-dado">
+        <h2>⚙️ Parâmetros Configuráveis</h2>
+        <ul>
+          <li>pH ideal: <strong>5.8 a 6.4</strong></li>
+          <li>EC recomendada: <strong>1.6 a 2.0 mS/cm</strong></li>
+          <li>Revisão automática: ✅ Ativada</li>
+        </ul>
+      </div>
+
+      <!-- Estatísticas do Sistema -->
+      <div class="cartao-dado">
+        <h2>📊 Estatísticas Gerais</h2>
+        <ul>
+          <li>Número total de estufas monitoradas: <strong>3</strong></li>
+          <li>Média de consumo diário de solução: <strong>185 L</strong></li>
+          <li>Alertas no mês: <strong>5 eventos críticos</strong></li>
+        </ul>
+      </div>
+
+      <!-- Botão de ação -->
+      <div class="cartao-acao">
+        <button class="btn-acao" onclick="alert('Abrindo painel de gestão de usuários...')">
+          🛡️ Gerenciar Perfis de Acesso
+        </button>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="../../scripts/includes.js" defer></script>
+  <script src="../../scripts/dashboards/hidroponia.js" defer></script>
+</body>
+</html>
